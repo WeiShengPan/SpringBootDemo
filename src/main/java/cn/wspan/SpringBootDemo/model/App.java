@@ -12,6 +12,8 @@ public class App {
 	
 	private String owner;
 	
+	private String country;
+	
 	public String getName() {
 		return name;
 	}
@@ -34,5 +36,13 @@ public class App {
 	
 	public void setOwner(String owner) {
 		this.owner = owner;
+	}
+	
+	public String getCountry() {
+		return country;
+	}
+	
+	public void setCountry(String country) {
+		this.country = country;
 	}
 }

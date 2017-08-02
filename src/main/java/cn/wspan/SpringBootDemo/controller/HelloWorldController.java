@@ -28,6 +28,7 @@ public class HelloWorldController {
 		app.setName(propertiesConfig.getAppName());
 		app.setDesc(propertiesConfig.getAppDesc());
 		app.setOwner(propertiesConfig.getAppOwner());
+		app.setCountry(propertiesConfig.getAppCountry());
 		return app;
 	}
 }
