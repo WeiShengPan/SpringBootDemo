@@ -3,6 +3,7 @@ package cn.wspan.SpringBootDemo.controller;
 import cn.wspan.SpringBootDemo.model.User;
 import cn.wspan.SpringBootDemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,15 +20,15 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping(value = "get", method = RequestMethod.GET)
-	public User getUser() {
-		return userService.getById(1L);
+	public User getUser(Long id) {
+		return userService.getById(id);
 	}
 	
 	@RequestMapping(value = "create", method = RequestMethod.GET)
-	public void createUser() {
+	public void createUser(String username, String password) {
 		User user = new User();
-		user.setUsername("WeishengPan");
-		user.setPassword("admin");
+		user.setUsername(username);
+		user.setPassword(password);
 		userService.createUser(user);
 	}
 }

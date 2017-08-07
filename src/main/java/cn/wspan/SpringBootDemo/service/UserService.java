@@ -3,6 +3,7 @@ package cn.wspan.SpringBootDemo.service;
 import cn.wspan.SpringBootDemo.dao.UserMapper;
 import cn.wspan.SpringBootDemo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,7 +15,8 @@ public class UserService {
 	
 	@Autowired
 	private UserMapper userMapper;
-	
+
+	@Cacheable(value = "user-key")
 	public User getById(Long id) {
 		return userMapper.getById(id);
 	}

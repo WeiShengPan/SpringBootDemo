@@ -6,6 +6,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
+ * 使用Spring JPA作为数据持久层
+ * 
  * @author panws
  * @since 2017-08-02
  */
