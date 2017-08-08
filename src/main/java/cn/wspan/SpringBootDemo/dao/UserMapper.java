@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Mapper
 public interface UserMapper {
-	
+
 	User getById(Long id);
 	
 	void createUser(User user);

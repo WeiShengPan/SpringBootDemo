@@ -15,22 +15,22 @@
     <select id="getById" parameterType="java.lang.Long" resultType="cn.wspan.SpringBootDemo.model.User">
         SELECT
         <include refid="Base_Column_List"/>
-        FROM user where id = #{0}
+        FROM user WHERE id = #{0}
     </select>
 
     <select id="findAll" resultMap="UserMap" resultType="list">
-        select
+        SELECT
         <include refid="Base_Column_List"/>
-        from user
+        FROM user
     </select>
 
     <insert id="createUser" parameterType="cn.wspan.SpringBootDemo.model.User" useGeneratedKeys="true"
             keyProperty="id">
-        insert into user (username, password) values (#{username}, #{password})
+        INSERT INTO user (username, password) VALUES (#{username}, #{password})
     </insert>
 
     <delete id="deleteById" parameterType="java.lang.Long">
-        delete from user where id = #{0}
+        DELETE FROM user WHERE id = #{0}
     </delete>
 
 </mapper>
