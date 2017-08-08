@@ -1,3 +1,3 @@
 # SpringBootDemo
-This is a demo for SpringBoot framework learning.
-
+This is a demo for personal SpringBoot framework learning.
+It would be very glad if this project could help you whether you are exploring or just in case learning SpringBoot.
