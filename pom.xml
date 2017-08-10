@@ -5,7 +5,7 @@
 
     <groupId>cn.wspan</groupId>
     <artifactId>SpringBootDemo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>SpringBootDemo</name>
@@ -25,11 +25,14 @@
     </properties>
 
     <dependencies>
+
+        <!--SpringBoot Core-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!--Test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -52,7 +55,25 @@
             <artifactId>spring-session-data-redis</artifactId>
         </dependency>
 
-        <!--数据库操作-->
+        <!--Mail-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <!--thymeleaf-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!--AMQP-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <!--Database-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
