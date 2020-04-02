@@ -32,6 +32,12 @@ public class AuthAspect {
     public void authPoint() {}
 
     /**
+     * pointcut for some target method
+     */
+    @Pointcut("execution(* cn.wspan.SpringBootDemo.service.CityService.*(..))")
+    public void authPoint2() {}
+
+    /**
      * Around auth
      *
      * @param joinPoint The proceeding join point
