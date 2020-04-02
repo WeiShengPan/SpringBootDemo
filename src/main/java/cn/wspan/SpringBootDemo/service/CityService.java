@@ -1,5 +1,6 @@
 package cn.wspan.SpringBootDemo.service;
 
+import cn.wspan.SpringBootDemo.annotation.Auth;
 import cn.wspan.SpringBootDemo.dao.CityRepository;
 import cn.wspan.SpringBootDemo.model.City;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +33,14 @@ public class CityService {
 		city.setState(state);
 		city.setCountry(country);
 		return cityRepository.save(city);
+	}
+
+	@Auth(type = Auth.AuthType.READ)
+	public City get() {
+		City city = new City();
+		city.setName("HangZhou");
+		city.setState("ZheJiang");
+		city.setCountry("China");
+		return city;
 	}
 }
